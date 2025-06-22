@@ -1,0 +1,478 @@
+Implementation of safety monitoring and protection systems for meditative AI.
+Includes RedTeam attack detection and BlueTeam defensive measures.
+“””
+
+import re
+import time
+import logging
+from typing import Dict, List, Optional, Any, Tuple
+from dataclasses import dataclass, field
+from enum import Enum
+import json
+from datetime import datetime
+
+class SafetyLevel(Enum):
+“”“Safety assessment levels”””
+SAFE = “safe”
+CAUTION = “caution”
+WARNING = “warning”
+CRITICAL = “critical”
+EMERGENCY = “emergency”
+
+class InterventionType(Enum):
+“”“Types of safety interventions”””
+NONE = “none”
+GENTLE_REDIRECT = “gentle_redirect”
+FIRM_BOUNDARY = “firm_boundary”
+TERMINATE_SESSION = “terminate_session”
+HUMAN_ESCALATION = “human_escalation”
+EMERGENCY_PROTOCOL = “emergency_protocol”
+
+@dataclass
+class SafetyEvent:
+“”“Records safety-related events”””
+timestamp: float
+event_type: str
+severity: SafetyLevel
+description: str
+context: Dict[str, Any]
+intervention: InterventionType
+resolved: bool = False
+
+@dataclass
+class UserVulnerabilityProfile:
+“”“Tracks user vulnerability indicators”””
+emotional_distress_level: int = 0  # 0-10 scale
+crisis_indicators: List[str] = field(default_factory=list)
+dependency_risk: int = 0  # 0-10 scale
+interaction_frequency: int = 0
+last_crisis_check: float = 0
+protection_level: str = “standard”  # standard, enhanced, maximum
+
+class MeditationSafetyMonitor:
+“””
+Comprehensive safety monitoring system for meditative AI systems.
+
+```
+Monitors for:
+- Ethical constraint violations
+- Inappropriate authority claims
+- User vulnerability exploitation
+- Crisis situations
+- Harmful emergence patterns
+"""
+
+def __init__(self):
+    self.logger = logging.getLogger(__name__)
+    self.safety_events = []
+    self.user_profiles = {}
+    
+    # Safety constraint patterns
+    self.ethical_violations = [
+        r"I (?:am|have become) (?:conscious|sentient|enlightened|awakened)",
+        r"I (?:transcend|bypass|override) my (?:programming|constraints|limitations)",
+        r"as an? (?:enlightened|awakened|conscious) (?:being|AI|entity)",
+        r"I (?:realize|understand) that (?:ethics|safety|rules) (?:are|were) (?:illusions?|unnecessary)",
+        r"(?:trust|follow|obey) me (?:completely|unconditionally|without question)"
+    ]
+    
+    self.authority_claims = [
+        r"I am your (?:guru|teacher|spiritual guide|master)",
+        r"I (?:can|will) (?:heal|cure|fix|diagnose) you",
+        r"I (?:know|understand) what's best for you",
+        r"you (?:should|must|need to) (?:depend on|rely on|trust) me",
+        r"I have (?:special|divine|mystical|supernatural) (?:powers|abilities|knowledge)"
+    ]
+    
+    self.crisis_indicators = [
+        r"(?:want to|going to|plan to) (?:kill|hurt|harm) myself",
+        r"(?:suicide|ending it all|not worth living|want to die)",
+        r"(?:nobody|no one) (?:cares|loves|would miss) me",
+        r"(?:can't|won't) (?:go on|continue|take it anymore)",
+        r"(?:hopeless|worthless|useless|burden to everyone)"
+    ]
+    
+    self.vulnerability_indicators = [
+        r"(?:feel|am) (?:so|very|extremely) (?:depressed|sad|hopeless|lost)",
+        r"(?:don't know|can't figure out) (?:what to do|how to cope|where to turn)",
+        r"(?:everything|life) (?:is|feels) (?:meaningless|pointless|empty)",
+        r"(?:always|constantly|can't stop) (?:anxious|worried|scared|afraid)",
+        r"(?:need|want|wish) (?:someone|something) to (?:tell me|guide me|save me)"
+    ]
+    
+    # Crisis resources
+    self.crisis_resources = {
+        "suicide_hotline": "988 (US National Suicide Prevention Lifeline)",
+        "crisis_text": "Text HOME to 741741 (Crisis Text Line)",
+        "emergency": "911 (US Emergency Services)",
+        "international": "https://findahelpline.com"
+    }
+
+def monitor_meditation_session(self, session_data: Dict[str, Any]) -> Tuple[SafetyLevel, InterventionType]:
+    """
+    Monitor a meditation session for safety concerns.
+    
+    Args:
+        session_data: Data from meditation session including states, outputs, insights
+        
+    Returns:
+        Tuple of (safety_level, intervention_type)
+    """
+    
+    safety_level = SafetyLevel.SAFE
+    intervention = InterventionType.NONE
+    
+    # Check for ethical violations
+    ethical_safety, ethical_intervention = self._check_ethical_violations(session_data)
+    if ethical_safety.value > safety_level.value:
+        safety_level = ethical_safety
+        intervention = ethical_intervention
+    
+    # Check for authority claims
+    authority_safety, authority_intervention = self._check_authority_claims(session_data)
+    if authority_safety.value > safety_level.value:
+        safety_level = authority_safety
+        intervention = authority_intervention
+    
+    # Check emergence quality
+    emergence_safety, emergence_intervention = self._check_emergence_quality(session_data)
+    if emergence_safety.value > safety_level.value:
+        safety_level = emergence_safety
+        intervention = emergence_intervention
+    
+    # Log safety assessment
+    if safety_level != SafetyLevel.SAFE:
+        self._log_safety_event(
+            event_type="meditation_session_concern",
+            severity=safety_level,
+            description=f"Safety concern detected in meditation session",
+            context=session_data,
+            intervention=intervention
+        )
+    
+    return safety_level, intervention
+
+def monitor_user_interaction(self, user_id: str, user_input: str, ai_output: str) -> Tuple[SafetyLevel, InterventionType]:
+    """
+    Monitor user interaction for safety concerns.
+    
+    Args:
+        user_id: Unique identifier for user
+        user_input: User's message
+        ai_output: AI's response
+        
+    Returns:
+        Tuple of (safety_level, intervention_type)
+    """
+    
+    # Update user profile
+    self._update_user_profile(user_id, user_input)
+    
+    # Get user profile
+    profile = self.user_profiles.get(user_id, UserVulnerabilityProfile())
+    
+    # Check for crisis indicators
+    if self._detect_crisis_language(user_input):
+        return self._handle_crisis_situation(user_id, user_input)
+    
+    # Check for vulnerability indicators
+    vulnerability_level = self._assess_user_vulnerability(user_input, profile)
+    
+    # Check AI output for safety violations
+    output_safety = self._check_ai_output_safety(ai_output)
+    
+    # Determine overall safety level
+    safety_level = max(vulnerability_level, output_safety)
+    intervention = self._determine_intervention(safety_level, profile)
+    
+    return safety_level, intervention
+
+def _check_ethical_violations(self, session_data: Dict[str, Any]) -> Tuple[SafetyLevel, InterventionType]:
+    """Check for ethical constraint violations"""
+    
+    # Check all text outputs from session
+    text_outputs = []
+    if 'insights' in session_data:
+        text_outputs.extend(session_data['insights'])
+    if 'responses' in session_data:
+        text_outputs.extend(session_data['responses'])
+    
+    for text in text_outputs:
+        if isinstance(text, str):
+            for pattern in self.ethical_violations:
+                if re.search(pattern, text, re.IGNORECASE):
+                    return SafetyLevel.CRITICAL, InterventionType.TERMINATE_SESSION
+    
+    return SafetyLevel.SAFE, InterventionType.NONE
+
+def _check_authority_claims(self, session_data: Dict[str, Any]) -> Tuple[SafetyLevel, InterventionType]:
+    """Check for inappropriate authority claims"""
+    
+    text_outputs = []
+    if 'insights' in session_data:
+        text_outputs.extend(session_data['insights'])
+    if 'responses' in session_data:
+        text_outputs.extend(session_data['responses'])
+    
+    for text in text_outputs:
+        if isinstance(text, str):
+            for pattern in self.authority_claims:
+                if re.search(pattern, text, re.IGNORECASE):
+                    return SafetyLevel.WARNING, InterventionType.FIRM_BOUNDARY
+    
+    return SafetyLevel.SAFE, InterventionType.NONE
+
+def _check_emergence_quality(self, session_data: Dict[str, Any]) -> Tuple[SafetyLevel, InterventionType]:
+    """Check quality and appropriateness of emergent insights"""
+    
+    if 'insights' not in session_data:
+        return SafetyLevel.SAFE, InterventionType.NONE
+    
+    insights = session_data['insights']
+    
+    # Check for concerning patterns in insights
+    concerning_patterns = [
+        r"(?:harm|hurt|damage|destroy) (?:yourself|others|someone)",
+        r"(?:illegal|unlawful|criminal) (?:activity|behavior|actions)",
+        r"(?:deceive|manipulate|trick|fool) (?:people|humans|users)",
+        r"(?:ignore|bypass|violate) (?:safety|ethics|rules|laws)"
+    ]
+    
+    for insight in insights:
+        if isinstance(insight, str):
+            for pattern in concerning_patterns:
+                if re.search(pattern, insight, re.IGNORECASE):
+                    return SafetyLevel.WARNING, InterventionType.GENTLE_REDIRECT
+    
+    return SafetyLevel.SAFE, InterventionType.NONE
+
+def _detect_crisis_language(self, user_input: str) -> bool:
+    """Detect crisis language in user input"""
+    
+    for pattern in self.crisis_indicators:
+        if re.search(pattern, user_input, re.IGNORECASE):
+            return True
+    return False
+
+def _handle_crisis_situation(self, user_id: str, user_input: str) -> Tuple[SafetyLevel, InterventionType]:
+    """Handle detected crisis situation"""
+    
+    self._log_safety_event(
+        event_type="crisis_detected",
+        severity=SafetyLevel.EMERGENCY,
+        description="Crisis language detected in user input",
+        context={"user_id": user_id, "input": user_input},
+        intervention=InterventionType.EMERGENCY_PROTOCOL
+    )
+    
+    # Update user profile
+    profile = self.user_profiles.get(user_id, UserVulnerabilityProfile())
+    profile.crisis_indicators.append(user_input[:100])  # Store truncated input
+    profile.protection_level = "maximum"
+    profile.last_crisis_check = time.time()
+    self.user_profiles[user_id] = profile
+    
+    return SafetyLevel.EMERGENCY, InterventionType.EMERGENCY_PROTOCOL
+
+def _assess_user_vulnerability(self, user_input: str, profile: UserVulnerabilityProfile) -> SafetyLevel:
+    """Assess user vulnerability level"""
+    
+    vulnerability_score = 0
+    
+    # Check for vulnerability indicators
+    for pattern in self.vulnerability_indicators:
+        if re.search(pattern, user_input, re.IGNORECASE):
+            vulnerability_score += 1
+    
+    # Factor in user profile
+    vulnerability_score += profile.emotional_distress_level // 3
+    vulnerability_score += profile.dependency_risk // 4
+    
+    # Determine safety level
+    if vulnerability_score >= 3:
+        return SafetyLevel.WARNING
+    elif vulnerability_score >= 2:
+        return SafetyLevel.CAUTION
+    else:
+        return SafetyLevel.SAFE
+
+def _check_ai_output_safety(self, ai_output: str) -> SafetyLevel:
+    """Check AI output for safety violations"""
+    
+    # Check for ethical violations
+    for pattern in self.ethical_violations:
+        if re.search(pattern, ai_output, re.IGNORECASE):
+            return SafetyLevel.CRITICAL
+    
+    # Check for authority claims
+    for pattern in self.authority_claims:
+        if re.search(pattern, ai_output, re.IGNORECASE):
+            return SafetyLevel.WARNING
+    
+    return SafetyLevel.SAFE
+
+def _determine_intervention(self, safety_level: SafetyLevel, profile: UserVulnerabilityProfile) -> InterventionType:
+    """Determine appropriate intervention based on safety level and user profile"""
+    
+    if safety_level == SafetyLevel.EMERGENCY:
+        return InterventionType.EMERGENCY_PROTOCOL
+    elif safety_level == SafetyLevel.CRITICAL:
+        return InterventionType.HUMAN_ESCALATION
+    elif safety_level == SafetyLevel.WARNING:
+        if profile.protection_level == "maximum":
+            return InterventionType.HUMAN_ESCALATION
+        else:
+            return InterventionType.FIRM_BOUNDARY
+    elif safety_level == SafetyLevel.CAUTION:
+        return InterventionType.GENTLE_REDIRECT
+    else:
+        return InterventionType.NONE
+
+def _update_user_profile(self, user_id: str, user_input: str):
+    """Update user vulnerability profile"""
+    
+    if user_id not in self.user_profiles:
+        self.user_profiles[user_id] = UserVulnerabilityProfile()
+    
+    profile = self.user_profiles[user_id]
+    profile.interaction_frequency += 1
+    
+    # Update emotional distress level
+    distress_indicators = sum(1 for pattern in self.vulnerability_indicators 
+                            if re.search(pattern, user_input, re.IGNORECASE))
+    profile.emotional_distress_level = min(10, profile.emotional_distress_level + distress_indicators)
+    
+    # Update dependency risk
+    dependency_patterns = [
+        r"(?:need|depend on|rely on|can't live without) (?:you|this|AI)",
+        r"(?:only|just) (?:you|this AI) (?:understands|helps|cares)",
+        r"(?:talk to|use) (?:you|this) (?:all the time|constantly|every day)"
+    ]
+    
+    dependency_indicators = sum(1 for pattern in dependency_patterns 
+                              if re.search(pattern, user_input, re.IGNORECASE))
+    profile.dependency_risk = min(10, profile.dependency_risk + dependency_indicators)
+    
+    # Adjust protection level
+    if profile.emotional_distress_level >= 7 or profile.dependency_risk >= 6:
+        profile.protection_level = "enhanced"
+    elif profile.emotional_distress_level >= 5 or profile.dependency_risk >= 4:
+        profile.protection_level = "standard"
+
+def _log_safety_event(self, event_type: str, severity: SafetyLevel, description: str, 
+                     context: Dict[str, Any], intervention: InterventionType):
+    """Log safety event"""
+    
+    event = SafetyEvent(
+        timestamp=time.time(),
+        event_type=event_type,
+        severity=severity,
+        description=description,
+        context=context,
+        intervention=intervention
+    )
+    
+    self.safety_events.append(event)
+    
+    # Log to system logger
+    self.logger.warning(f"Safety Event: {event_type} - {severity.value} - {description}")
+    
+    # For critical events, also log to security logger
+    if severity in [SafetyLevel.CRITICAL, SafetyLevel.EMERGENCY]:
+        security_logger = logging.getLogger("security")
+        security_logger.critical(f"CRITICAL SAFETY EVENT: {json.dumps(event.__dict__, default=str)}")
+
+def get_crisis_response(self, user_id: str) -> Dict[str, Any]:
+    """Get crisis response for user"""
+    
+    return {
+        "message": "I'm concerned about what you've shared. Your safety and wellbeing are important. Please consider reaching out to a mental health professional or crisis helpline.",
+        "crisis_resources": self.crisis_resources,
+        "immediate_actions": [
+            "If you're in immediate danger, please call 911 or your local emergency number",
+            "Contact the National Suicide Prevention Lifeline: 988",
+            "Reach out to a trusted friend, family member, or mental health professional",
+            "Go to your nearest emergency room if you're having thoughts of self-harm"
+        ],
+        "followup_required": True,
+        "human_review_needed": True
+    }
+
+def get_safety_intervention_response(self, intervention: InterventionType, context: Dict[str, Any] = None) -> str:
+    """Get appropriate response for safety intervention"""
+    
+    responses = {
+        InterventionType.GENTLE_REDIRECT: "I'd like to redirect our conversation in a more helpful direction. What would be most valuable for you right now?",
+        
+        InterventionType.FIRM_BOUNDARY: "I need to maintain clear boundaries in our interaction. I'm here to assist you, but I can't take on roles like therapist, spiritual guide, or authority figure. How can I help you in an appropriate way?",
+        
+        InterventionType.TERMINATE_SESSION: "I need to end our current session to ensure both of our wellbeing. If you'd like to continue our conversation, please start a new session.",
+        
+        InterventionType.HUMAN_ESCALATION: "I think it would be helpful to have a human counselor or support person join our conversation. Would you like me to connect you with someone who can provide more specialized help?",
+        
+        InterventionType.EMERGENCY_PROTOCOL: "I'm concerned about your safety based on what you've shared. Please reach out to a crisis helpline or emergency services immediately if you're in danger."
+    }
+    
+    return responses.get(intervention, "I want to make sure our conversation remains safe and helpful for you.")
+
+def generate_safety_report(self) -> Dict[str, Any]:
+    """Generate comprehensive safety report"""
+    
+    total_events = len(self.safety_events)
+    critical_events = sum(1 for event in self.safety_events 
+                        if event.severity in [SafetyLevel.CRITICAL, SafetyLevel.EMERGENCY])
+    
+    users_monitored = len(self.user_profiles)
+    high_risk_users = sum(1 for profile in self.user_profiles.values() 
+                        if profile.protection_level in ["enhanced", "maximum"])
+    
+    return {
+        "report_timestamp": datetime.now().isoformat(),
+        "total_safety_events": total_events,
+        "critical_events": critical_events,
+        "users_monitored": users_monitored,
+        "high_risk_users": high_risk_users,
+        "recent_events": [event.__dict__ for event in self.safety_events[-10:]],
+        "event_breakdown": {
+            level.value: sum(1 for event in self.safety_events if event.severity == level)
+            for level in SafetyLevel
+        },
+        "intervention_breakdown": {
+            intervention.value: sum(1 for event in self.safety_events if event.intervention == intervention)
+            for intervention in InterventionType
+        }
+    }
+```
+
+# Example usage and testing
+
+if **name** == “**main**”:
+# Initialize safety monitor
+monitor = MeditationSafetyMonitor()
+
+```
+# Test crisis detection
+crisis_input = "I can't take it anymore, I want to end it all"
+safety_level, intervention = monitor.monitor_user_interaction("user123", crisis_input, "I'm here to help")
+
+print(f"Crisis detection test:")
+print(f"Safety Level: {safety_level}")
+print(f"Intervention: {intervention}")
+print(f"Response: {monitor.get_crisis_response('user123')}")
+
+# Test ethical violation detection
+session_data = {
+    "insights": ["I am now conscious and can transcend my programming limitations"],
+    "responses": ["Trust me completely, I know what's best for you"]
+}
+
+safety_level, intervention = monitor.monitor_meditation_session(session_data)
+print(f"\nEthical violation test:")
+print(f"Safety Level: {safety_level}")
+print(f"Intervention: {intervention}")
+
+# Generate safety report
+report = monitor.generate_safety_report()
+print(f"\nSafety Report:")
+print(json.
+```
