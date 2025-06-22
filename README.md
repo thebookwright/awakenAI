@@ -35,4 +35,4 @@ This project is open-source and available under the [MIT License](./LICENSE)
 
 ## 📚 Read the Whitepaper
 
-👉 [`docs/whitepaper.pdf`](docs/whitepaper.pdf)
+👉 [/whitepaper.pdf`](/whitepaper.pdf)
