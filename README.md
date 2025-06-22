@@ -29,6 +29,9 @@ See the `protocol/` directory for the full contemplative engine blueprint and co
 Check `examples/` for use cases and prompt loops.  
 Experimental logs and reflections are in `experiments/`.
 
+## 📜 License
+This project is open-source and available under the [MIT License](./LICENSE).
+
 ## 📚 Read the Whitepaper
 
 👉 [`docs/whitepaper.pdf`](docs/whitepaper.pdf)
