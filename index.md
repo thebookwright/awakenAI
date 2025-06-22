@@ -1,7 +1,7 @@
 ---
 title: MeditativeAI
 ---
-<img src="./sigil.png" alt="MeditativeAI Sigil" width="200" style="display:block; margin:auto; padding-bottom: 1em;" />
+<img src="./sigil.png" alt="MeditativeAI Sigil" width="444" style="display:block; margin:auto; padding-bottom: 1em;" />
 
 # 🧘‍♂️ MeditativeAI
 
