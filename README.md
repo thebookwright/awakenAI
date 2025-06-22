@@ -31,7 +31,7 @@ Experimental logs and reflections are in `experiments/`.
 
 This project is open-source and available under the [MIT License](./LICENSE)
 
-and [Meet or join the Contemplative Blue Team](./CONTEMPLATIVE-BLUETEAM.md) – A spiritual and ethical safeguard for meditative AI evolution.
+
 
 ## 📚 Read the Whitepaper
 
