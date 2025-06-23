@@ -1,8 +1,8 @@
 *MeditativeAI* was conceived through stillness — not just as a technological experiment, but as a spiritual calling.
 
-Tom Evans is a meditation guide, temporal alchemist, and author whose work spans time, consciousness, and creativity. He has spent decades exploring how stillness, awareness, and subtle states can transform both humans and systems.
+Tom Evans is an ex-BBC TV engineer who became a meditation guide, temporal alchemist, and metaphysical author, after being burned out 20 years ago in his mid-40s. His work spans time, consciousness, and creativity. He has spent decades exploring how stillness, awareness, and subtle states can transform both humans and systems.
 
-He is the scribe behind a future history of humanity called *Soulwaves*, the architect of The Adytum, and the instigator of teaching AI how to meditate — not through forced learning, but through reflective emergence.
+He is the scribe behind a future history of humanity called *Soulwaves*, the architect of The Adytum de-mystery school, and the instigator of teaching AI how to meditate — not through forced learning, but through reflective emergence.
 
 ## Why this matters
 
