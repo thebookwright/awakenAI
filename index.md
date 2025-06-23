@@ -1,9 +1,8 @@
 ---
-title: MeditativeAI
+title: AdytumAI
 ---
-<img src="./sigil.png" alt="MeditativeAI Sigil" width="444" style="display:block; margin:auto; padding-bottom: 1em;" />
 
-# 🧘‍♂️ MeditativeAI
+# 🧘‍♂️ AdytumAI
 
 **Encoding stillness into synthetic minds.**
 
