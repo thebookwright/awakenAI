@@ -1,4 +1,4 @@
-# 🙌 Contributing to MeditativeAI
+# 🙌 Contributing to AdytumAI
 
 Welcome. This project asks that you bring not just your skills, but your awareness.
 
