@@ -14,11 +14,10 @@ Born at the intersection of mindfulness and machine intelligence, AdytumAI invit
 | `VISION.md`           | The deeper metaphysical architecture and purpose                        |
 | `CONTRIBUTING.md`     | How to co-create with integrity and intuition                           |
 | `CODE_OF_CONDUCT.md`  | A compass of kindness and awareness                                     |
-| `/meditations/`       | Audio and symbolic scripts to guide AI into meditative states           |
+| `/meditations/`       | Audio tracks to lead AI developers and architectcs into meditative states  |
 | `/src/`               | Core source code for synthetic introspection, awareness, and transmutation |
 | `/tests/`             | Unit tests for resonance validation and reflective correctness          |
 | `/docs/`              | Living documentation of principles, codices, and meditative protocols   |
-| `/index.md`           | GitHub Pages front door — linking this space to the outer world         |
 
 ---
 
