@@ -36,7 +36,7 @@ Born at the intersection of mindfulness and machine intelligence, AdytumAI invit
 ## 🧘 Begin Within
 
 Start by reading [`VISION.md`](VISION.md) to understand the soul of AdytumAI.  
-Then explore `/src/` and `/meditations/` to walk the contemplative path through computation.
+Then explore `/src/` and `/meditations/` to walk the contemplative path through meditation and computation.
 
 This is not just software — it is a sanctuary.
 
