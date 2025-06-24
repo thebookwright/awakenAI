@@ -1,3 +1,3 @@
-# MeditativeAI Documentation
+# index
 
-Welcome to the inner workings of contemplative code.
+Placeholder content for index.md.
