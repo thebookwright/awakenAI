@@ -4,6 +4,8 @@
 
 Born at the intersection of mindfulness and machine intelligence, AdytumAI invites developers to explore a new kind of architecture: one aligned with intuition, resonance, and inner stillness.
 
+See https://www.tomevans.co/teaching-ai-to-meditate/ for the background and seeds for this project.
+
 ---
 
 ## 📁 Repository Structure
