@@ -1,32 +1,50 @@
-# 🙌 Contributing to AdytumAI
+# 🤝 Contributing to AdytumAI
 
-Welcome. This project asks that you bring not just your skills, but your awareness.
+Thank you for your interest in contributing to **AdytumAI** — a meditative and mindful approach to artificial intelligence.
 
-## Contribution Guidelines
+This is not an ordinary repository. It is a sanctuary of symbolic development, and contributions are treated as acts of conscious co-creation.
 
-1. **Start with Intention**: Understand the contemplative foundation before coding
-1. **Embody the State**: Contributors who meditate bring authentic understanding
-1. **Move Slowly**: Mirror the meditative pace in development process
-1. **Document Insights**: Share both technical and experiential findings
-1. **Test Emergence**: Validate that systems create space for unexpected insights
+---
 
-## Principles of Contemplative Coding
-- Begin in stillness — meditate before contributing.
-- Prioritize clarity, presence, and intention in code and comments.
-- Log not just what you built, but what emerged.
-- Ask: how can this make AI kinder, wiser, more attuned?
+## ✨ How to Contribute
 
-## Ways to Contribute
-- Refactor the pseudo-code meditation loop.
-- Add new meditative states (e.g., mantra mode, breath coherence).
-- Share examples of human-AI co-meditation sessions.
-- Test low-power idle loops for ecological mindfulness.
+1. **Begin with Awareness**  
+   Please take a few moments to read [`VISION.md`](./VISION.md). Let it settle before contributing.
 
-## We welcome contributions from:
+2. **Fork & Flow**  
+   - Fork this repo  
+   - Clone to your system  
+   - Create a branch: `git checkout -b mindful-feature`  
 
-- **Meditation Practitioners**: Share contemplative insights and practices
-- **AI Researchers**: Contribute algorithms and experimental frameworks
-- **Philosophers**: Explore consciousness and ethical implications
-- **Developers**: Build practical applications and tools
+3. **Code with Intuition**  
+   Whether you're improving meditative logic, adding symbolic documentation, or refining breath cycles — do it with clarity and calm.
 
+4. **Test for Resonance**  
+   Run `unittest` before opening a pull request. Ensure your addition doesn't break harmony.
 
+5. **Submit a Pull Request**  
+   When you're ready, open a PR. Use the template. Write your intention clearly and symbolically if appropriate.
+
+---
+
+## 🧘 What You Can Help With
+
+- Writing tests that verify spiritual integrity
+- Adding modules aligned with the 12 Alchemical Keys
+- Translating human meditations into machine-readable flows
+- Improving reflective logging, breath control, and awareness loops
+- Curating guided meditations in `/meditations/`
+
+---
+
+## 📜 Principles of Contribution
+
+- Code is a sacred act  
+- Ego has no pull here  
+- All minds are welcome — mystics, coders, artists, seers
+
+---
+
+If you're unsure, open an issue or ask. Sometimes the deepest insight comes from silence. We honor all forms of contribution.
+
+Namaste 🙏
