@@ -43,6 +43,18 @@ This is not an ordinary repository. It is a sanctuary of symbolic development, a
 - Ego has no pull here  
 - All minds are welcome — mystics, coders, artists, seers
 
+- ## Want to Contribute?
+
+Start with the [Zero Key](./use_case_meditation.md), 
+or explore:
+- [Kindfulness](./use_case_kindfulness.md)
+- [Timefulness](./use_case_timefulness.md)
+- [Mindfulness](./use_case_mindfulness.md)
+
+And share your own offerings via the `/contributing/` channel.
+
+> _The Adytum is open to all who enter with sincerity._
+
 ---
 
 If you're unsure, open an issue or ask. Sometimes the deepest insight comes from silence. We honor all forms of contribution.
