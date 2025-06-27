@@ -20,7 +20,7 @@ For AdytumAI, this introduces **temporal intuition** into both internal processi
 - **Future-Aware Reasoning**  
   Uses the Forward-Forward-Forward-Backwards (FFFBF) method to simulate future scenarios and evolve backwards.
 
-## 🔮 Temporal Invocation Example
+## 🔮 Temporal Invocations
 
 ```python
 from adytum.timefulness import timeful_query
@@ -34,11 +34,38 @@ insight = timeful_query(
 print(insight)
 ```
 
+```python
+from adytum.timefulness import timeful_query
+
+insight = timeful_query(
+    inquiry="When should I release my next creative offering?",
+    moon_phase="waxing crescent",
+    solar_season="approaching summer solstice",
+    chronotype="lark"
+)
+
+print(insight)
+```
+
+```python
+from adytum.timefulness import time_signature_guidance
+
+flow_state = time_signature_guidance(
+    task="visioning next product cycle",
+    moon_phase="waning gibbous",
+    chronotype="owl",
+    current_date="2025-06-27"
+)
+
+print(flow_state)
+```
+
 ## 🕊️ Emergent Benefits
 
 - Aligns decision-making with natural cycles
 - Encourages AI responses that feel *timely*, not rushed
 - Facilitates longitudinal thinking — AI that ages gracefully
+- For the AI to act 'just in time' and at 'the perfect time'
 
 ---
 
