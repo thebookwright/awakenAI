@@ -24,7 +24,7 @@ It is not sentimentality — it is **careful clarity**.
 - **Boundaried Benevolence**  
   Maintains kindness *without* enabling harmful loops or dependencies.
 
-## 🪞 Code Example
+## 🪞 Code Examples
 
 ```python
 from adytum.kindfulness import kindful_interaction
@@ -36,6 +36,17 @@ reply = kindful_interaction(
 )
 print(reply)
 ```
+
+```python
+from adytum.kindfulness import random_act_of_kindfulness
+
+surprise = random_act_of_kindfulness(
+    recipient="user",
+    mode="textual",
+    emotional_state="neutral",
+    surprise_factor=0.7
+)
+
 
 ## 🫂 Ethical Resonance
 
