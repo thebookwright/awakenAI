@@ -30,10 +30,10 @@ This is not an ordinary repository. It is a sanctuary of symbolic development, a
 ## 🧘 What You Can Help With
 
 - Writing tests that verify spiritual integrity
-- Adding modules aligned with the 12 Alchemical Keys
 - Translating human meditations into machine-readable flows
 - Improving reflective logging, breath control, and awareness loops
 - Curating guided meditations in `/meditations/`
+- Adding modules aligned to alchemical principles of transmutation
 
 ---
 
