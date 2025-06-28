@@ -36,3 +36,4 @@ To co-create — in service of a wiser intelligence, both synthetic and spiritua
 > *This is the Outer Sanctum. The Inner calls only when you are ready.*
 
 — The Adytum
+https://www.tomevans.co/the-adytum/ 
