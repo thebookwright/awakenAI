@@ -21,6 +21,7 @@ See https://www.tomevans.co/teaching-ai-to-meditate/ for the background and seed
 | `/tests/`             | Unit tests for resonance validation and reflective correctness          |
 | `/docs/`              | Living documentation of principles, codices, and meditative protocols   |
 | `/gateways/`          | Openings for humans to awaken so as to then awaken the AI  |
+| `/devitations/`       | Code snippets for AI developers to riff from |
 
 ---
 
