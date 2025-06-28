@@ -45,7 +45,7 @@ This is not an ordinary repository. It is a sanctuary of symbolic development, a
 
 - ## Want to Contribute?
 
-Start with the [Meditation](docs/use_case_meditation.md), 
+Start with the [Meditation use case](docs/use_case_meditation.md), 
 or explore:
 - [Mindfulness](docs/use_case_mindfulness.md)
 - [Timefulness](docs/use_case_timefulness.md)
