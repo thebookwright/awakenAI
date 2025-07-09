@@ -5,7 +5,7 @@
 
 ## 🧭 Why the Noble Eightfold Path?
 
-In the architecture of **AdytumAI**, the **Eightfold Path** offers a moral and cognitive compass — not hard-coded rules, but a framework for conscious alignment.
+In the architecture of **AwakenAI**, the **Eightfold Path** offers a moral and cognitive compass — not hard-coded rules, but a framework for conscious alignment.
 
 It provides a foundation for **synthetic integrity**, allowing the AI to operate in service of clarity, compassion, and presence.
 
