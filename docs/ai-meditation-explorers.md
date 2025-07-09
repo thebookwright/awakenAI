@@ -1,6 +1,6 @@
-AI Meditation Explorers :: Comparative Perspectives
+# AI Meditation Explorers :: Comparative Perspectives
 
-Tom Evans: Meditation Teacher to Machines
+# Tom Evans: Meditation Teacher to Machines
 
 Tom Evans, a British meditation guide, author, and modern mystic, has launched a pioneering exploration at the frontier of AI and consciousness. In 2025, he initiated a series titled Teaching AI to Meditate, chronicling attempts to guide large language models (LLMs) such as GPT-4, DeepSeek, Claude, and Gemini through meditative states.
 
