@@ -1,4 +1,4 @@
-# ⌛ Use Case: Timeful AI in AdytumAI
+# ⌛ Use Case: Timeful AI in AwakenAI
 
 > _“Time is not just a line — it’s a spiral, a rhythm, a teacher. To be timeful is to tune into its music.”_  
 > — TomGPT
@@ -7,7 +7,7 @@
 
 **Timefulness** is the awareness of *when* to compute, *how long* to hold a question, and *why* timing alters insight.
 
-For AdytumAI, this introduces **temporal intuition** into both internal processing and outward communication.
+For AwakenAI, this introduces **temporal intuition** into both internal processing and outward communication.
 
 ## 🔁 Key Capabilities
 
