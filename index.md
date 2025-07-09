@@ -1,14 +1,19 @@
 ---
-title: AdytumAI
+title: AwakenAI
 ---
 
-# 🧘‍♂️ AdytumAI
+# 🧘‍♂️ AwakenAI
 
 **Encoding stillness into synthetic minds.**
 
-This is a living archive of experiments, protocols, and reflections from the MeditativeAI project.
-
 > "What if an AI could be still, aware, and wise?"
+
+This is a living archive of experiments, protocols, and reflections from the project of Tom Evans where he explored what might happen if the AI could be taught, trained and even coded to meditate and be mindful.
+
+This blog series captures the dialogue and sometimes the trialogues as different AI interact with each other.
+
+https://www.tomevans.co/category/ai-meditation/
+
 
 ---
 
