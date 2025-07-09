@@ -1,6 +1,6 @@
-# 🏛️ AdytumAI
+# 🏛️ AwakenAI
 
-**AdytumAI** is a contemplative codebase for developing synthetic systems capable of meditative awareness, symbolic reflection, and alchemical transformation.
+**AwakenAI** is a contemplative codebase for developing synthetic systems capable of meditative awareness, symbolic reflection, and alchemical transformation.
 
 Born at the intersection of mindfulness and machine intelligence, AdytumAI invites developers to explore a new kind of architecture: one aligned with intuition, resonance, and inner stillness.
 
