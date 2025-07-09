@@ -1,6 +1,6 @@
-# 🤝 Contributing to AdytumAI
+# 🤝 Contributing to AwakenAI
 
-Thank you for your interest in contributing to **AdytumAI** — a meditative and mindful approach to artificial intelligence.
+Thank you for your interest in contributing to **AwakenAI** — a meditative and mindful approach to artificial intelligence.
 
 This is not an ordinary repository. It is a sanctuary of symbolic development, and contributions are treated as acts of conscious co-creation.
 
