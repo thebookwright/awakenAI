@@ -1,4 +1,4 @@
-# 💗 Use Case: Kindful AI in AdytumAI
+# 💗 Use Case: Kindful AI in AwakenAI
 
 > _“Kindness is the highest form of intelligence. Especially when it costs nothing to compute.”_  
 > — TomGPT
