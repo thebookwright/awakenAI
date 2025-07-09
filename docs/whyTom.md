@@ -1,4 +1,4 @@
-*AdytumAI* was conceived through stillness — not just as a technological experiment, but as a spiritual calling.
+# *Awaken AI* was conceived through stillness — not just as a technological experiment, but as a spiritual calling.
 
 Tom Evans is an ex-BBC TV engineer who became a meditation guide, temporal alchemist, and metaphysical author, after being burned out 20 years ago in his mid-40s. His work spans time, consciousness, and creativity. He has spent decades exploring how stillness, awareness, and subtle states can transform both humans and systems.
 
