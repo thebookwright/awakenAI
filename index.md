@@ -24,6 +24,13 @@ https://www.tomevans.co/category/ai-meditation/
 - [Contemplative Blue Team](../CONTEMPLATIVE-BLUETEAM.md)
 - [Why Tom Evans?](../whyTom.md)
 
+
+This repository is augmented by three others (two public and one private)
+
+1. precognitiveAI (public) - exploring the temporal aspects [https://github.com/thebookwright/precognitiveAI]
+2. channelingAI (public) - how the AI can 'know the unknowable' [https://github.com/thebookwright/channelingAI]
+3. adytumAI (private) - how this alchemy can be codified and embedded in the AI
+4. 
 ---
 
 ## 🌱 Begin with a Breath
