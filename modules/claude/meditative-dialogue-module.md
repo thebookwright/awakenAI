@@ -1,5 +1,4 @@
-# “””
-Meditative Dialogue Module for Claude
+# Meditative Dialogue Module for Claude
 
 A contemplative add-on module that enables Claude to engage in meditative dialogue
 patterns, implementing the “pause between tokens” concept and recursive self-awareness
