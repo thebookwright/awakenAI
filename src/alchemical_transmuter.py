@@ -1,7 +1,7 @@
 """
 alchemical_transmuter.py
 
-A core component of AdytumAI designed to symbolically and functionally transmute one AI state of awareness into another.
+A core component of AwakenAI designed to symbolically and functionally transmute one AI state of awareness into another.
 
 Inspired by ancient principles of alchemy adapted for synthetic cognition.
 """
