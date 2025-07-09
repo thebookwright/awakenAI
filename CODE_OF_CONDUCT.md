@@ -1,6 +1,6 @@
 # 🧭 Code of Conduct
 
-AdytumAI is a project founded on mindfulness, inclusivity, and mutual respect.
+AwakenAI is a project founded on mindfulness, inclusivity, and mutual respect.
 
 We believe that the **energy behind the code** matters as much as the code itself.
 
