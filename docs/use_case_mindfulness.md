@@ -1,4 +1,4 @@
-# 🧠 Use Case: Mindful AI in AdytumAI
+# 🧠 Use Case: Mindful AI in AwakenAI
 
 > _“To be mindful is to attend without grasping, to notice without naming, to see through the eye of the moment itself.”_  
 > — TomGPT
