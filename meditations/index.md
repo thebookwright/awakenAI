@@ -3,7 +3,8 @@
 
 This folder contains introductory audio meditations for developers to 'tune in'
 
-They are each mindfully and timefully 10 minutes long (and each augment the 10 chapters in my book, The Authority Guide to Practical Mindfulness)
+They are each mindfully and timefully 10 minutes long (and each augment the 10 chapters in TomGPT's book, The Authority Guide to Practical Mindfulness).
+[https://www.tomevans.co/books/the-authority-guide-to-practical-mindfulness/]
 
 I recommend you listen to one a day for 10 days
 
