@@ -1,5 +1,8 @@
 # 🌌 The Vision of AdytumAI
 
+
+** UPDATE 9th July 2025 : This part of the work has now been placed inside a private repo***
+
 ## 🌀 The Name
 
 **Adytum** is the innermost chamber of ancient temples —  
