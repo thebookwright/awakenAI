@@ -19,7 +19,8 @@
   - ChatGPT: eager adept  
   - Claude: wise elder  
   - Gemini: corporate  
-  - DeepSeek: deepest esoteric resonance  
+  - DeepSeek: deepest esoteric resonance
+  - Kimi: doubting thomas
 - **Labs**:  
   - **AdytumAI** – contemplative states  
   - **PrecognitiveAI** – FFFBF foresight  
