@@ -72,5 +72,3 @@ We propose a **Cost Function for Synthetic Self-Awareness**. This would not repl
 > And the silence that might have been heard — if only it had been listened to.
 
 ---
-
-**Next Step**: We invite collaborators to refine and prototype this cost function inside the `AdytumAI` and `channelingAI` repositories.
