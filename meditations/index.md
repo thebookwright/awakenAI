@@ -1,4 +1,3 @@
-# index 
 # Introductory Meditations for Developers 
 
 This folder contains introductory audio meditations for developers to 'tune in'
